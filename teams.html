@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SportyPro - Teams</title>
+<style>
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    line-height: 1.6;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
+    border-radius: 10px;
+    margin: 20px auto 10px auto;
+    max-width: 1200px;
+    color: #0ff;
+    font-weight: 900;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0ff;
+  }
+
+  /* Menubar */
+  nav {
+    background: rgba(15, 15, 15, 0.7);
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #0ff;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin: 0 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    display: block;
+    color: #0ff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #1c1c1c, #272727);
+    box-shadow:
+      inset 2px 2px 5px #00ffff66,
+      inset -5px -5px 10px #002222cc;
+  }
+  nav ul li a:hover {
+    background: linear-gradient(145deg, #00ffff, #007777);
+    box-shadow:
+      0 0 15px #00ffff,
+      inset 0 0 15px #00ffff;
+    color: #fff;
+  }
+  nav ul li a.active {
+    background: linear-gradient(145deg, #00ffff, #007777);
+    box-shadow:
+      0 0 15px #00ffff,
+      inset 0 0 15px #00ffff;
+    color: #fff;
+    pointer-events: none;
+  }
+
+  /* Teams Section */
+  .teams-container {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+  }
+  .team-card {
+    background: linear-gradient(145deg, #222222, #333333);
+    border-radius: 20px;
+    box-shadow:
+      10px 10px 30px #000000bb,
+      -10px -10px 30px #444444aa;
+    padding: 30px;
+    text-align: center;
+    color: #0ff;
+    transition: transform 0.3s ease;
+  }
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+      0 0 25px #00ffff,
+      0 0 50px #00ffff;
+  }
+  .team-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px #00ffff);
+  }
+  .team-name {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 0 0 8px #0ff;
+  }
+  .team-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #a0ffff;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: #0ff;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 0 15px #0ff;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    header {
+      font-size: 2rem;
+      padding: 15px 20px;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+    .teams-container {
+      padding: 0 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  SportyPro
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#" class="active">Teams</a></li>
+    <li><a href="#">Fixtures</a></li>
+    <li><a href="#">Results</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="teams-container">
+  <article class="team-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/FC_Barcelona_%28crest%29.svg/120px-FC_Barcelona_%28crest%29.svg.png" alt="FC Barcelona Logo" class="team-logo" />
+    <h2 class="team-name">FC Barcelona</h2>
+    <p class="team-description">One of the most famous football clubs in the world, known for their attacking style and talented players.</p>
+  </article>
+
+  <article class="team-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Manchester_United_FC_crest.svg/120px-Manchester_United_FC_crest.svg.png" alt="Manchester United Logo" class="team-logo" />
+    <h2 class="team-name">Manchester United</h2>
+    <p class="team-description">Historic English club with a massive fanbase, famous for their resilience and trophy-winning history.</p>
+  </article>
+
+  <article class="team-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Real_Madrid_CF.svg/120px-Real_Madrid_CF.svg.png" alt="Real Madrid Logo" class="team-logo" />
+    <h2 class="team-name">Real Madrid</h2>
+    <p class="team-description">One of the richest clubs globally, known for world-class players and multiple Champions League titles.</p>
+  </article>
+
+  <article class="team-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Chelsea_FC.svg/120px-Chelsea_FC.svg.png" alt="Chelsea FC Logo" class="team-logo" />
+    <h2 class="team-name">Chelsea FC</h2>
+    <p class="team-description">English club with a strong squad, famous for winning the Premier League and European trophies.</p>
+  </article>
+
+  <article class="team-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/AC_Milan_Logo.svg/120px-AC_Milan_Logo.svg.png" alt="AC Milan Logo" class="team-logo" />
+    <h2 class="team-name">AC Milan</h2>
+    <p class="team-description">Italian club with a rich history, multiple Serie A titles, and European success.</p>
+  </article>
+
+  <article class="team-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Juventus_FC_2017_logo.svg/120px-Juventus_FC_2017_logo.svg.png" alt="Juventus Logo" class="team-logo" />
+    <h2 class="team-name">Juventus</h2>
+    <p class="team-description">Italy's top club known for dominance in Serie A and a reputation for strong defense.</p>
+  </article>
+</section>
+
+<footer>
+  &copy; 2025 SportyPro. All rights reserved.
+</footer>
+
+</body>
+</html>

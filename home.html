@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SportyPro - Home</title>
+<style>
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    line-height: 1.6;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
+    border-radius: 10px;
+    margin: 20px auto 10px auto;
+    max-width: 1200px;
+    color: #0ff;
+    font-weight: 900;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0ff;
+  }
+
+  /* Menubar */
+  nav {
+    background: rgba(15, 15, 15, 0.7);
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #0ff;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin: 0 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    display: block;
+    color: #0ff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #1c1c1c, #272727);
+    box-shadow:
+      inset 2px 2px 5px #00ffff66,
+      inset -5px -5px 10px #002222cc;
+  }
+  nav ul li a:hover {
+    background: linear-gradient(145deg, #00ffff, #007777);
+    box-shadow:
+      0 0 15px #00ffff,
+      inset 0 0 15px #00ffff;
+    color: #fff;
+  }
+
+  /* Hero Section */
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    background: linear-gradient(145deg, #1c1c1c, #272727);
+    border-radius: 15px;
+    padding: 60px 40px;
+    box-shadow:
+      10px 10px 30px #000000aa,
+      -10px -10px 30px #44444488;
+    color: #0ff;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #0ff;
+  }
+  .hero p {
+    font-size: 1.4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  .hero button {
+    margin-top: 30px;
+    background: linear-gradient(145deg, #00ffff, #007777);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow:
+      0 0 15px #00ffff,
+      inset 0 0 10px #00ffff;
+    transition: background 0.3s ease;
+  }
+  .hero button:hover {
+    background: linear-gradient(145deg, #007777, #00ffff);
+    box-shadow: 0 0 25px #00ffff;
+  }
+
+  /* Features Section */
+  .features {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  .feature-box {
+    background: linear-gradient(145deg, #222222, #333333);
+    box-shadow:
+      10px 10px 30px #000000bb,
+      -10px -10px 30px #444444aa;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: #0ff;
+    flex: 1;
+    transition: transform 0.3s ease;
+  }
+  .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow:
+      0 0 20px #00ffff,
+      0 0 40px #00ffff;
+  }
+  .feature-box h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-shadow: 0 0 8px #0ff;
+  }
+  .feature-box p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: #0ff;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 0 15px #0ff;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .features {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  SportyPro
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Teams</a></li>
+    <li><a href="#">Fixtures</a></li>
+    <li><a href="#">Results</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Welcome to SportyPro</h1>
+  <p>Get the latest sports news, fixtures, and results all in one place. Experience the thrill of sports with a sleek and modern design built just for fans like you!</p>
+  <button>Explore Now</button>
+</section>
+
+<section class="features">
+  <div class="feature-box">
+    <h3>Latest Scores</h3>
+    <p>Stay updated with real-time scores from all your favorite sports leagues worldwide.</p>
+  </div>
+  <div class="feature-box">
+    <h3>Team Profiles</h3>
+    <p>Discover detailed information about teams, players, and stats to enhance your fandom.</p>
+  </div>
+  <div class="feature-box">
+    <h3>Match Schedules</h3>
+    <p>Never miss a game with our comprehensive and up-to-date match fixtures and schedules.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 SportyPro. All rights reserved.
+</footer>
+
+</body>
+</html>

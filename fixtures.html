@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SportyPro - Fixtures</title>
+<style>
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    line-height: 1.6;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
+    border-radius: 10px;
+    margin: 20px auto 10px auto;
+    max-width: 1200px;
+    color: #0ff;
+    font-weight: 900;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0ff;
+  }
+
+  /* Menubar */
+  nav {
+    background: rgba(15, 15, 15, 0.7);
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #0ff;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin: 0 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    display: block;
+    color: #0ff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #1c1c1c, #272727);
+    box-shadow:
+      inset 2px 2px 5px #00ffff66,
+      inset -5px -5px 10px #002222cc;
+  }
+  nav ul li a:hover {
+    background: linear-gradient(145deg, #00ffff, #007777);
+    box-shadow:
+      0 0 15px #00ffff,
+      inset 0 0 15px #00ffff;
+    color: #fff;
+  }
+  nav ul li a.active {
+    background: linear-gradient(145deg, #00ffff, #007777);
+    box-shadow:
+      0 0 15px #00ffff,
+      inset 0 0 15px #00ffff;
+    color: #fff;
+    pointer-events: none;
+  }
+
+  /* Fixtures Section */
+  .fixtures-container {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 40px;
+    background: linear-gradient(145deg, #1c1c1c, #272727);
+    border-radius: 15px;
+    box-shadow:
+      10px 10px 30px #000000bb,
+      -10px -10px 30px #444444aa;
+    color: #0ff;
+  }
+
+  .fixtures-container h2 {
+    padding: 30px 0 10px 0;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px #0ff;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+  thead tr {
+    background: linear-gradient(145deg, #00ffff88, #007777aa);
+  }
+  thead th {
+    padding: 15px;
+    color: #001f1f;
+    font-weight: 700;
+    text-align: left;
+    text-shadow: none;
+  }
+  tbody tr {
+    border-bottom: 1px solid #004f4f44;
+    transition: background 0.3s ease;
+  }
+  tbody tr:hover {
+    background: #005f5f44;
+  }
+  tbody td {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
+  .team-name {
+    font-weight: 700;
+    text-shadow: 0 0 5px #00ffff;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: #0ff;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 0 15px #0ff;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .fixtures-container {
+      padding: 20px;
+    }
+    table thead {
+      display: none;
+    }
+    table, tbody, tr, td {
+      display: block;
+      width: 100%;
+    }
+    tbody tr {
+      margin-bottom: 25px;
+      border-bottom: 2px solid #00ffffaa;
+      padding-bottom: 10px;
+    }
+    tbody td {
+      padding-left: 50%;
+      position: relative;
+      text-align: left;
+      font-size: 1rem;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      color: #00ffff;
+      white-space: nowrap;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  SportyPro
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="#" class="active">Fixtures</a></li>
+    <li><a href="#">Results</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="fixtures-container">
+  <h2>Upcoming Fixtures</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Venue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Date">2025-10-10</td>
+        <td data-label="Time">18:00</td>
+        <td data-label="Home Team" class="team-name">FC Barcelona</td>
+        <td data-label="Away Team" class="team-name">Manchester United</td>
+        <td data-label="Venue">Camp Nou</td>
+      </tr>
+      <tr>
+        <td data-label="Date">2025-10-12</td>
+        <td data-label="Time">20:30</td>
+        <td data-label="Home Team" class="team-name">Real Madrid</td>
+        <td data-label="Away Team" class="team-name">Chelsea FC</td>
+        <td data-label="Venue">Santiago Bernabéu</td>
+      </tr>
+      <tr>
+        <td data-label="Date">2025-10-15</td>
+        <td data-label="Time">19:00</td>
+        <td data-label="Home Team" class="team-name">AC Milan</td>
+        <td data-label="Away Team" class="team-name">Juventus</td>
+        <td data-label="Venue">San Siro</td>
+      </tr>
+      <tr>
+        <td data-label="Date">2025-10-18</td>
+        <td data-label="Time">17:45</td>
+        <td data-label="Home Team" class="team-name">Manchester United</td>
+        <td data-label="Away Team" class="team-name">Chelsea FC</td>
+        <td data-label="Venue">Old Trafford</td>
+      </tr>
+      <tr>
+        <td data-label="Date">2025-10-20</td>
+        <td data-label="Time">21:00</td>
+        <td data-label="Home Team" class="team-name">Juventus</td>
+        <td data-label="Away Team" class="team-name">FC Barcelona</td>
+        <td data-label="Venue">Allianz Stadium</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  &copy; 2025 SportyPro. All rights reserved.
+</footer>
+
+</body>
+</html>
